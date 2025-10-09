@@ -10,7 +10,6 @@ I make no promises that all features and/or plugin options for any of these plug
 This plugin is simply the code I needed to get them to work inside my own game. Proceed at own risk.
 Good luck and God bless!
 
-
 ## Usage
 Place VisuStellaMZ plugins at the top of your plugin load order.
 Place Myth_CGC plugins directly below VisuStellaMZ plugins.
@@ -18,3 +17,13 @@ Place this plugin directly below the Myth_CGC plugins.
 
 ## Plugin Parameters
 None at this time.
+
+
+## See also
+Personally, I am a huge fan of MythAtelier's plugins. If you are reading this, you probably are, too!
+
+But just in case:
+
+[MythAtelier's Plugins](https://mythatelier.itch.io/)
+
+[VisuStellaMZ's Plugins](http://www.yanfly.moe/wiki/VisuStella_MZ)
