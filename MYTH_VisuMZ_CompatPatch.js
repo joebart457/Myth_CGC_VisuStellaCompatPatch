@@ -706,20 +706,24 @@ Window_ActorStatus.prototype.drawBackgroundRect = function (_0x4b9278) {
 // REGION Window_PartyStatus
 //////////////////////////////////////
 
-Myth.BLK.Window_PartyStatus_drawItemStatus = function(index) {
-    const actor = this.actor(index);
-    const rect = this.itemRectWithPadding(index);
-    const nameX = this.nameX(rect);
-    const nameY = this.nameY(rect);
-    const stateIconX = this.stateIconX(rect);
-    const stateIconY = this.stateIconY(rect);
-    const basicGaugesX = this.basicGaugesX(rect);
-    const basicGaugesY = this.basicGaugesY(rect);
-    this.placeTimeGauge(actor, nameX, nameY);
-    this.placeActorName(actor, nameX, nameY);
-    this.placeStateIcon(actor, stateIconX, stateIconY);
-    this.placeBasicGauges(actor, basicGaugesX, basicGaugesY);
-};
+if (Myth.BLK) {
+    Myth.BLK.Window_PartyStatus_drawItemStatus = function(index) {
+        const actor = this.actor(index);
+        const rect = this.itemRectWithPadding(index);
+        const nameX = this.nameX(rect);
+        const nameY = this.nameY(rect);
+        const stateIconX = this.stateIconX(rect);
+        const stateIconY = this.stateIconY(rect);
+        const basicGaugesX = this.basicGaugesX(rect);
+        const basicGaugesY = this.basicGaugesY(rect);
+        this.placeTimeGauge(actor, nameX, nameY);
+        this.placeActorName(actor, nameX, nameY);
+        this.placeStateIcon(actor, stateIconX, stateIconY);
+        this.placeBasicGauges(actor, basicGaugesX, basicGaugesY);
+    };
+}
+
+
 
 Window_PartyStatus.prototype.isFrameVisible = function () {
   return true;
