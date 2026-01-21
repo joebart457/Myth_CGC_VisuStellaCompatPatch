@@ -24,7 +24,7 @@
 var Compat_Myth_VisuMZ = Compat_Myth_VisuMZ || {};
 Compat_Myth_VisuMZ.prototypes = Compat_Myth_VisuMZ.prototypes || {};
 Compat_Myth_VisuMZ.version = 1.0;
-Compat_Myth_VisuMZ.minorVersion = 1;
+Compat_Myth_VisuMZ.minorVersion = 2;
 
 (() => {
     const pluginName = "MYTH_VisuMZ_CompatPatch";
@@ -1212,15 +1212,16 @@ Compat_Window_Base.prototype.playBuzzerSound = function() {
                 return Compat_Window_Base.prototype.drawBackPicture.call(this,_0x464c6c, _0x2af365, _0xbc23ad, _0x5c095b, _0x2c0ccb, _0x46cc50);
         };
 
-        Myth.CGC.Window_Base_drawTextEx = Compat_Window_Base.prototype.drawTextEx;
-        Window_Base.prototype.drawTextEx = function(text, x, y)
+
+        Sprite_SkillCard.prototype.drawTextEx = function (text, x, y)
         {
-                if(text && this.constructor != Window_ChoiceList && Myth.CGC.wrapWindowText)
-                {
-                        text = this.convertToWrappedText(text);
-                }
-                return Myth.CGC.Window_Base_drawTextEx.call(this, text, x, y);
+                return Compat_Window_Base.prototype.drawTextEx.call(this, text, x, y);
         };
+
+        Sprite_SkillCard.prototype.drawText = function (text, x, y, maxWidth, align)
+        {
+                return Compat_Window_Base.prototype.drawText.call(this, text, x, y, maxWidth, align);
+        }
 
 
         Sprite_SkillCard.prototype.processDrawCenteredPicture = function(_0x152f7d)
